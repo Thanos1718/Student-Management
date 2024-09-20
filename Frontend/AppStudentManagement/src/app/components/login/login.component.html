@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title> 
+    <link rel="stylesheet" href="login.component.css"> 
+</head>
+<body>
+    <div class="container">
+        <form (ngSubmit)="login()" #loginForm="ngForm">
+            <h1>Login Form</h1>
+            <div class="form-group">
+                <label for="username">Email </label>
+                <input type="text" placeholder="Enter email" id="username" 
+                       [(ngModel)]="user.email" name="username" 
+                       class="form-control" required #username="ngModel">
+                <div class="form-text text-danger" *ngIf="username.invalid && (username.dirty || username.touched)">
+                    <div *ngIf="username.errors?.['required']">Email is required.</div>
+                </div>
+            </div>
+            <div>
+                <label for="password">Password </label>
+                <input type="password" placeholder="Enter password" id="password" 
+                       [(ngModel)]="user.password" name="password" 
+                       class="form-control" required #password="ngModel">
+                <div class="form-text text-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <div *ngIf="password.errors?.['required']">Password is required.</div>
+                </div>
+            </div> 
+            <input type="submit" class="btn" value="Login" [disabled]="loginForm.invalid">
+        </form>
+
+        <div class="forgotPass">
+            <a href="/sendLink" class="passreset"> Forgot password</a>
+        </div>
+
+        <div class="register-container">
+            <label> Don't have an Account?</label>
+            <button id="register" routerLink="/register"> Register</button>
+        </div>
+    </div>
+</body>
+</html>

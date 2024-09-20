@@ -1,0 +1,32 @@
+.container{
+    margin-top: 10px;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    border: 2px solid;
+}
+  
+
+  th{
+    position:sticky;
+    top: 0px;
+   
+  }
+  table{
+
+    margin-top: 5px;
+ 
+  }
+th,td{
+  border: 1px solid;
+}
+.table-wrapper{
+  max-height:600px;
+    overflow-x:scroll;
+    overflow-y: scroll;
+  
+  }
+headers{
+    background-color: burlywood;
+}

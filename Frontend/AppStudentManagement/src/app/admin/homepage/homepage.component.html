@@ -1,0 +1,33 @@
+
+<div class="container-fluid" >
+    <div clas="heading">
+        <h3>Welcome to the Application!</h3>
+    </div>
+    <div class="toolbar mt-2 center">
+    <mat-toolbar >
+        <mat-toolbar-row style="display:flex; gap:45px "> 
+            <a mat-button (click)="changeComponent('Details')"> Student </a>
+           <a mat-button (click)="changeComponent('Student')"  > Registerd Course Details </a> 
+           <a mat-button (click)="changeComponent('Courses')">  Add Course </a> 
+           <a mat-button (click)="changeComponent('courseList')"> Courses </a>
+         </mat-toolbar-row>
+
+    </mat-toolbar>
+
+
+    
+  
+    <div class="container">
+    <ng-container *ngIf="component==='Student'">
+         <app-student-data></app-student-data>
+     </ng-container>
+     <ng-container *ngIf="component==='Courses'">
+        <app-course-data></app-course-data>
+    </ng-container>
+    <ng-container *ngIf="component==='courseList'">
+        <app-courses-list>    </app-courses-list>
+    </ng-container>
+    <ng-container *ngIf="component==='Details'">
+        <app-student-details>    </app-student-details>
+    </ng-container>
+    </div>

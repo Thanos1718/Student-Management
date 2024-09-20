@@ -1,0 +1,27 @@
+<div class="component">
+    <form (ngSubmit)="sendEmail()" #form="ngForm">
+      <div class="row">
+        <label for="email">Enter email address</label>
+      </div>
+      <div class="row">
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          #emailInput="ngModel"
+          required
+          email
+        />
+      
+        <div *ngIf="emailInput.invalid && emailInput.touched" class="text-danger">
+          <span *ngIf="emailInput.errors?.['required']">Email is required.</span>
+          <span *ngIf="emailInput.errors?.['email']">Please enter a valid email.</span>
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" [disabled]="emailInput.invalid">Send</button>
+      </div>
+    </form>
+  </div>
+  

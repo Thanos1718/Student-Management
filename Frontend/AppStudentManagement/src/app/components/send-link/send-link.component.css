@@ -1,0 +1,14 @@
+
+.component{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   height: 100vh;
+}
+.row
+  {
+    width: 200px;
+    margin:5px;
+    text-align: center;
+  }

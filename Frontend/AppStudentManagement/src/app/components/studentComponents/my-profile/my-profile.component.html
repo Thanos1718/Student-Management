@@ -1,0 +1,78 @@
+<div *ngIf="loading" class="spinner">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!loading">
+    <div class="container light-style flex-grow-1 container-p-y p-3">
+        <h4 class="font-weight-bold py-1 mb-2">Account settings</h4>
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list">General</a>
+                    </div>
+                    <button >Logout</button>
+                </div>
+
+                
+                <div>
+                   
+            
+                </div>
+
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <div *ngIf="userFileUrl">
+                                <img *ngIf="userFileType?.startsWith('image')" [src]="userFileUrl" alt="User File" />
+                                <iframe *ngIf="userFileType === 'text/plain'" [src]="userFileUrl" width="600" height="400"></iframe>
+                                <a *ngIf="!userFileType?.startsWith('image') && userFileType !== 'text/plain'" [href]="userFileUrl" download>Download File</a>
+                            </div>
+                            <div class="border-light m-0">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control mb-1" [(ngModel)]="studentData.firstName" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" [(ngModel)]="studentData.lastName" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input type="text" class="form-control" [(ngModel)]="studentData.email" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Mobile Number</label>
+                                        <input type="text" class="form-control" [(ngModel)]="studentData.mobile" readonly>
+                                    </div>
+
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab-pane fade" id="account-change-password">
+    <div class="card-body pb-2">
+        <div class="form-group">
+            <label class="form-label">Current Password</label>
+            <input type="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="form-label">New Password</label>
+            <input type="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Repeat New Password</label>
+            <input type="password" class="form-control">
+        </div>
+    </div>
+
+  
+</div>

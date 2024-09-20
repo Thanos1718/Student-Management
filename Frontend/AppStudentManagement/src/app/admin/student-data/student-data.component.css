@@ -1,0 +1,36 @@
+.container{
+    margin-top: 25px;
+    margin-left: 60px;
+    align-items: center;
+    text-align: center;
+    border: 2px solid;
+  }
+  
+  
+  th{
+    position:sticky;
+    top: 0px;
+   
+  }
+  table{
+  
+    margin-top: 5px;
+    
+  }
+  th,td{
+  border: 1px solid;
+  }
+  .table-wrapper{
+    padding: 0px;
+    margin: 0px;
+   height: 100%;
+   width: 100%;
+   overflow-x: scroll;
+   overflow-y: scroll;
+  }
+  headers{
+    background-color: burlywood;
+  }
+  h5{
+    margin-left: 500px;
+  }

@@ -1,0 +1,27 @@
+
+<div class="container-fluid" >
+    <div clas="heading">
+        <h3>Welcome to the Application!</h3>
+    </div>
+    <div class="toolbar mt-2 center">
+    <mat-toolbar >
+        <mat-toolbar-row style="display:flex; gap:45px "> 
+           
+           <a mat-button (click)="changeComponent('Home')"  > Home </a> 
+           <a mat-button (click)="changeComponent('Courses')"> My Courses </a> 
+          <a mat-button  (click)="changeComponent('Profile')" > Profile </a>
+         </mat-toolbar-row>
+
+    </mat-toolbar>
+  
+    <div >
+    <ng-container *ngIf="component==='Home'">
+         <app-student-home></app-student-home>
+     </ng-container>
+     <ng-container *ngIf="component==='Profile'">
+        <app-my-profile></app-my-profile>
+    </ng-container>
+    <ng-container *ngIf="component==='Courses'">
+        <app-my-courses> </app-my-courses>
+    </ng-container>
+    </div>

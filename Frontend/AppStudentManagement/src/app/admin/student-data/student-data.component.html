@@ -1,0 +1,42 @@
+<div class="container">
+    
+  <div class="table-wrapper" *ngIf="data.length; else nocourse">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th style=>Mobile</th>
+          <th>Course registered</th>
+          <th> Registration Date </th>
+          <th> Unsubscribe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of data">
+          <td>{{ student.firstName }}</td>
+          <td>{{ student.lastName }}</td> 
+          <td>{{ student.email }}</td> 
+          <td>{{ student.mobile }}</td> 
+          <td>{{ student.courseName }}</td>
+          <td *ngIf="student.ispurchased; else noDate">{{ student.registrationTIme }}</td>
+          <td><button (click)="Unsubscribe(student.courseName,student.email,student.firstName)" [disabled]="!student.coursesregistered">Cancel Subscription</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <ng-template #nocourse> 
+    <p>No courses added yet!!</p>
+  </ng-template>
+
+  <ng-template #noDate>
+    <td> 
+      <p > Not registered!</p>
+    </td>
+    
+  </ng-template>
+
+ 
+</div>

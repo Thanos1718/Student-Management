@@ -1,0 +1,78 @@
+
+<div class="container">
+
+
+  <div class="left-panel">
+    <h4> Add a Course</h4>
+
+
+    <div class="form-elements">
+      <form [formGroup]="courseForm" (ngSubmit)="getData()" >
+
+    <div class="row">
+        <div class="col">
+         <div class="headeritem" data-mdb-input-init>
+            <label class="form-label" for="form12" >Course Name</label>
+            <input type="text" id="form12" class="form-control"    formControlName="nameProp" placeholder="Enter course name" />
+            <div class="form-text text-danger" *ngIf="nameProp.errors?.['required'] && nameProp.touched" >Please enter Course Name</div>
+
+          </div>
+        </div>
+        
+
+          <div class="col">
+            <div class="headeritem" data-mdb-input-init>
+                <label class="form-label" for="form12">Price</label>
+                <input type="Number" id="form13" class="form-control"  formControlName="priceProp" placeholder="Enter Price in INR" />
+                <div class="form-text text-danger" *ngIf="priceProp.errors?.['required'] && priceProp.touched" >Please enter Price</div>
+
+              </div>
+            </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col">
+        <div class="headeritem" data-mdb-input-init>
+            <label class="form-label" for="form12">Start Date</label>
+            <input type="Date" id="form12" class="form-control"  formControlName="sdate"  placeholder="Select start Date" />
+            
+
+          </div>
+        </div>
+
+          <div class="col">
+            <div class="headeritem" data-mdb-input-init>
+                <label class="form-label" for="form12">End Date </label>
+                
+                <input type="Date" id="form13" class="form-control"  formControlName="edate" placeholder="Select end Date" />
+
+              </div>
+            </div>
+
+    </div>
+
+    <div class="row"> 
+        <div class="headeritem" data-mdb-input-init>
+            <label class="form-label" for="form12">Description</label>
+            <input type="text" id="desc" class="form-control"  formControlName="descprop" placeholder="Enter course name" />
+            <div class="form-text text-danger"  *ngIf="descprop.errors?.['required'] && descprop.touched">Enter a description</div>
+
+          </div>
+    </div>
+    <div class="row">
+        
+        <button  type="submit" [disabled]="courseForm.invalid" > Submit  </button>
+ 
+    </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+  
+
+  
+  

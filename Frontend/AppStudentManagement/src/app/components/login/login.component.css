@@ -1,0 +1,111 @@
+/* Reset some default browser styles and ensure box-sizing includes padding and border in element width and height */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the body to take full viewport height, center content, and set font */
+body {
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    font-family: sans-serif;
+}
+
+/* Container for form, centered with auto margins */
+.container {
+    margin: auto;
+    width: 500px;
+    max-width: 90%;
+}
+
+/* Form styling: full width, padding, background color, rounded corners, and box shadow */
+.container form {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Corrected rgba value */
+}
+
+/* Form title styling: centered with bottom margin */
+.container form h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #222;
+}
+
+/* Form control styling: full width, white background, rounded corners, border, and margin */
+.container form .form-control {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid silver;
+    margin: 10px 0 0;
+    padding: 8px; /* Add some padding for text input */
+}
+
+/* Button styling: centered, width and height specified, background color, and uppercase text */
+.container form .btn {
+    display: block;
+    margin: 20px auto 0; /* Center button with margin and avoid using transform */
+    width: 120px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: #27a327;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 4px; /* Add border-radius to match form control styling */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.container form .btn:hover {
+    background-color: #219321; /* Darker shade of green for hover effect */
+}
+.register-container{
+
+    border-radius: 12px solid black;
+    padding: 10px;
+    margin-left:10px;
+    margin-top: 10px;
+}
+.register-container label{
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-top: 20px;
+    text-transform:uppercase ;
+}
+.register-container button{
+    margin-top: 0;
+    margin-left: 20px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    background: yellowgreen;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.forgotPass{
+    
+    margin-top: 15px;
+    align-items: center;
+    text-align: center;
+}
+a {
+    padding-top: 30px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    color: #0000FF;
+  }
+  

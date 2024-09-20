@@ -1,0 +1,33 @@
+
+<div class="container">
+    
+    <div class="table-wrapper" *ngIf="data.length; else noStudent">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th style=>Mobile</th>
+           
+            <th> Delete </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of data">
+            <td>{{ student.firstName }}</td>
+            <td>{{ student.lastName }}</td> 
+            <td>{{ student.email }}</td> 
+            <td>{{ student.mobile }}</td> 
+            <td><button (click)="Delete(student.email)" >Remove User </button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <ng-template #noStudent> 
+        <p>No Users !!</p>
+      </ng-template>
+  </div>
+
+  

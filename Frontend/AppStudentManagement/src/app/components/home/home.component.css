@@ -1,0 +1,24 @@
+.container{
+    justify-self: center;
+}
+heading{
+  vertical-align:super;
+}
+h3{
+  margin-top: 0.5vh;
+    margin-bottom: 0;
+    text-align:center;
+    vertical-align: baseline;
+    padding: 10px;
+    height: 8vh;
+    font-size: 25px;
+    vertical-align: super;
+    background-color: aqua;
+}
+
+
+a{
+  cursor: pointer;
+}
+
+  
